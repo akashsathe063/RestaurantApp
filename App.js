@@ -758,7 +758,7 @@ const Body = () =>{
                <RestaurantCard resData = {restList[6]}/>
                <RestaurantCard resData = {restList[7]}/> */}
                {
-                restList.map(restaurant =>( <RestaurantCard resData = {restaurant}/>) )
+                restList.map(restaurant =>( <RestaurantCard key = {restaurant.info.id} resData = {restaurant}/>) )
                }
              </div>
         </div>
