@@ -749,14 +749,17 @@ const Body = () =>{
               <div className = "res-container">
                {/* <RestaurantCard resName = "Meghana Foods" cuisine = "Biriyani, North Indian, Asian"/>
                <RestaurantCard resName = "KFC" cuisine = "Burger, Fast Food"/> */}
-               <RestaurantCard resData = {restList[0]}/>
+               {/* <RestaurantCard resData = {restList[0]}/>
                <RestaurantCard resData = {restList[1]}/>
                <RestaurantCard resData = {restList[2]}/>
                <RestaurantCard resData = {restList[3]}/>
                <RestaurantCard resData = {restList[4]}/>
                <RestaurantCard resData = {restList[5]}/>
                <RestaurantCard resData = {restList[6]}/>
-               <RestaurantCard resData = {restList[7]}/>
+               <RestaurantCard resData = {restList[7]}/> */}
+               {
+                restList.map(restaurant =>( <RestaurantCard resData = {restaurant}/>) )
+               }
              </div>
         </div>
     )
