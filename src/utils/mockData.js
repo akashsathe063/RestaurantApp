@@ -1,55 +1,3 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-
-// const heading = React.createElement("h1",{},"namaste react");
-// const root = ReactDOM.createRoot(document.getElementById("root"));
-// root.render(heading);
-//  const HeadingJsx = () => (<h1 id = "heading" className = "head" tabIndex = "5">Namaste React by using jsx..</h1>)
-
-//  const element = <h2>This is a react element...</h2>
-
-//  //React functional Component
-//  const HeadingComponent = () => {
-//     return (
-//         <div>
-//             <HeadingJsx/>
-//     <h1>Namaste React functionala component ak..</h1>
-//     {element}
-//     </div>
-// )
-//  }
-const Header = ()=>{
-    return (
-        <div className = "header">
-            <div className = "logo-container">
-                <img className = "logo" src = "https://www.logodesign.net/logo/smoking-burger-with-lettuce-3624ld.png?nwm=1&nws=1&industry=fast-food&sf=&txt_keyword=All"/>
-            </div>
-<div className = "nav-items">
-<ul>
-    <li>Home</li>
-    <li>About Us</li>
-    <li>Contact Us</li>
-    <li>Cart</li>
-</ul>
-</div>
-        </div>
-    )
-}
-
-const RestaurantCard = (props) =>{
-    console.log(props)
-    const {resData} = props
-    return (
-        <div className = "res-card">
-            <img className = "res-logo" src = {"https://media-assets.swiggy.com/swiggy/image/upload/"+resData.info.cloudinaryImageId}/>
-             <h3>{resData.info.name}</h3>
-             <h4>{resData.info.cuisines.join(", ")}</h4>
-             <h4>4.3 stars</h4>
-             <h4>38 min</h4>
-        </div>
-    )
-}
-
 const restList =  [
     {
     "info": {
@@ -69,6 +17,7 @@ const restList =  [
     ],
     "veg": true,
     "parentId": "1330",
+    "avgRating": 3.8,
     "avgRatingString": "NEW",
     "sla": {
     "deliveryTime": 52,
@@ -144,6 +93,7 @@ const restList =  [
     ],
     "veg": true,
     "parentId": "3143",
+    "avgRating": 3.5,
     "avgRatingString": "--",
     "sla": {
     "deliveryTime": 46,
@@ -742,35 +692,4 @@ const restList =  [
     }
     ]
 
-const Body = () =>{
-    return (
-        <div className = "body">
-              <div className = "search">Search</div>
-              <div className = "res-container">
-               {/* <RestaurantCard resName = "Meghana Foods" cuisine = "Biriyani, North Indian, Asian"/>
-               <RestaurantCard resName = "KFC" cuisine = "Burger, Fast Food"/> */}
-               {/* <RestaurantCard resData = {restList[0]}/>
-               <RestaurantCard resData = {restList[1]}/>
-               <RestaurantCard resData = {restList[2]}/>
-               <RestaurantCard resData = {restList[3]}/>
-               <RestaurantCard resData = {restList[4]}/>
-               <RestaurantCard resData = {restList[5]}/>
-               <RestaurantCard resData = {restList[6]}/>
-               <RestaurantCard resData = {restList[7]}/> */}
-               {
-                restList.map(restaurant =>( <RestaurantCard key = {restaurant.info.id} resData = {restaurant}/>) )
-               }
-             </div>
-        </div>
-    )
-}
-const Applayout = () =>{
-    return ( 
-    <div className = "app">
-      <Header/>
-      <Body/>
-    </div>)
-}
- const root = ReactDOM.createRoot(document.getElementById("root")); 
- root.render(<Applayout/>);
- 
+    export default restList;
