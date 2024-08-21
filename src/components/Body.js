@@ -60,10 +60,10 @@ const Body = () => {
         <button
           className="filter-btn"
           onClick={() => {
-            const listOfRestaurant = restList.filter(
+            const listOfRestaurantt = listOfRestaurant.filter(
               (rest) => rest.info.avgRating > 4.2
             );
-            setRestraunt(listOfRestaurant);
+            setFilterRestraunt(listOfRestaurantt);
           }}
         >
           Top Rated Restaurants
