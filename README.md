@@ -23,6 +23,6 @@ its pre build
 # importan notes
 1) react use a Reconciliation Algorithm (also known as react-fiber)
 
-# Q. nwhay react is fast?
+# Q. why react is fast?
 => because react is doing efficient dom manipulation. 
 
